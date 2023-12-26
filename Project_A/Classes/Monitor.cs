@@ -2,7 +2,7 @@
 
 namespace Project_A.Classes
 {
-    public class Monitor
+    public class Monitor : IPerson
     {
         public string NameStudent { get; set; }
         public int MainGroup { get; set; }
