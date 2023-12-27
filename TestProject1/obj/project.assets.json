@@ -595,14 +595,14 @@
           }
         }
       },
-      "Project_A/1.0.0": {
+      "Project_B/1.0.0": {
         "type": "project",
         "framework": ".NETCoreApp,Version=v7.0",
         "compile": {
-          "bin/placeholder/Project_A.dll": {}
+          "bin/placeholder/Project_B.dll": {}
         },
         "runtime": {
-          "bin/placeholder/Project_A.dll": {}
+          "bin/placeholder/Project_B.dll": {}
         }
       }
     }
@@ -2297,10 +2297,10 @@
         "system.threading.tasks.nuspec"
       ]
     },
-    "Project_A/1.0.0": {
+    "Project_B/1.0.0": {
       "type": "project",
-      "path": "../Project_A/Project_A.csproj",
-      "msbuildProject": "../Project_A/Project_A.csproj"
+      "path": "../Project_A/Project_B.csproj",
+      "msbuildProject": "../Project_A/Project_B.csproj"
     }
   },
   "projectFileDependencyGroups": {
@@ -2308,7 +2308,7 @@
       "MSTest.TestAdapter >= 2.2.10",
       "MSTest.TestFramework >= 2.2.10",
       "Microsoft.NET.Test.Sdk >= 17.7.1",
-      "Project_A >= 1.0.0",
+      "Project_B >= 1.0.0",
       "coverlet.collector >= 3.2.0"
     ]
   },
@@ -2318,11 +2318,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "E:\\Робота\\ООП\\Project_A\\TestProject1\\TestProject1.csproj",
+      "projectUniqueName": "E:\\Робота\\ООП\\Project_B\\TestProject1\\TestProject1.csproj",
       "projectName": "TestProject1",
-      "projectPath": "E:\\Робота\\ООП\\Project_A\\TestProject1\\TestProject1.csproj",
+      "projectPath": "E:\\Робота\\ООП\\Project_B\\TestProject1\\TestProject1.csproj",
       "packagesPath": "C:\\Users\\User\\.nuget\\packages\\",
-      "outputPath": "E:\\Робота\\ООП\\Project_A\\TestProject1\\obj\\",
+      "outputPath": "E:\\Робота\\ООП\\Project_B\\TestProject1\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\User\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -2339,8 +2339,8 @@
         "net7.0": {
           "targetAlias": "net7.0",
           "projectReferences": {
-            "E:\\Робота\\ООП\\Project_A\\Project_A\\Project_A.csproj": {
-              "projectPath": "E:\\Робота\\ООП\\Project_A\\Project_A\\Project_A.csproj"
+            "E:\\Робота\\ООП\\Project_B\\Project_A\\Project_B.csproj": {
+              "projectPath": "E:\\Робота\\ООП\\Project_B\\Project_A\\Project_B.csproj"
             }
           }
         }

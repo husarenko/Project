@@ -10,12 +10,17 @@ namespace Project_A.Classes
 
         public Works(Student student, string labname, int date)
         {
-            throw new NotImplementedException();
+            Student = student;
+            LabName = labname;
+            Date = date;
         }
 
         public void PrintToDisplay()
         {
-            throw new NotImplementedException();
+            Console.WriteLine($"Назва лабораторної: {LabName}");
+            Console.WriteLine($"Дата: {Date}");
+            Console.WriteLine("Iнфрмацiя про студента: ");
+            Student.DisplayInfo();
         }
     }
 }

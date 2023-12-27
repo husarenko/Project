@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "E:\\Робота\\ООП\\Project_A\\Project_A\\Project_A.csproj": {}
+    "E:\\Робота\\ООП\\Project_B\\Project_A\\Project_A.csproj": {}
   },
   "projects": {
-    "E:\\Робота\\ООП\\Project_A\\Project_A\\Project_A.csproj": {
+    "E:\\Робота\\ООП\\Project_B\\Project_A\\Project_A.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "E:\\Робота\\ООП\\Project_A\\Project_A\\Project_A.csproj",
+        "projectUniqueName": "E:\\Робота\\ООП\\Project_B\\Project_A\\Project_A.csproj",
         "projectName": "Project_A",
-        "projectPath": "E:\\Робота\\ООП\\Project_A\\Project_A\\Project_A.csproj",
+        "projectPath": "E:\\Робота\\ООП\\Project_B\\Project_A\\Project_A.csproj",
         "packagesPath": "C:\\Users\\User\\.nuget\\packages\\",
-        "outputPath": "E:\\Робота\\ООП\\Project_A\\Project_A\\obj\\",
+        "outputPath": "E:\\Робота\\ООП\\Project_B\\Project_A\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\User\\AppData\\Roaming\\NuGet\\NuGet.Config",
