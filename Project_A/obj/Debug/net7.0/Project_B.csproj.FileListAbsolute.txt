@@ -13,3 +13,18 @@ E:\Робота\ООП\Project_B\Project_A\obj\Debug\net7.0\refint\Project_B.dll
 E:\Робота\ООП\Project_B\Project_A\obj\Debug\net7.0\Project_B.pdb
 E:\Робота\ООП\Project_B\Project_A\obj\Debug\net7.0\Project_B.genruntimeconfig.cache
 E:\Робота\ООП\Project_B\Project_A\obj\Debug\net7.0\ref\Project_B.dll
+E:\Робота\ООП\Practise 2\Project-A\Project_A\bin\Debug\net7.0\Project_B.exe
+E:\Робота\ООП\Practise 2\Project-A\Project_A\bin\Debug\net7.0\Project_B.deps.json
+E:\Робота\ООП\Practise 2\Project-A\Project_A\bin\Debug\net7.0\Project_B.runtimeconfig.json
+E:\Робота\ООП\Practise 2\Project-A\Project_A\bin\Debug\net7.0\Project_B.dll
+E:\Робота\ООП\Practise 2\Project-A\Project_A\bin\Debug\net7.0\Project_B.pdb
+E:\Робота\ООП\Practise 2\Project-A\Project_A\obj\Debug\net7.0\Project_B.csproj.AssemblyReference.cache
+E:\Робота\ООП\Practise 2\Project-A\Project_A\obj\Debug\net7.0\Project_B.GeneratedMSBuildEditorConfig.editorconfig
+E:\Робота\ООП\Practise 2\Project-A\Project_A\obj\Debug\net7.0\Project_B.AssemblyInfoInputs.cache
+E:\Робота\ООП\Practise 2\Project-A\Project_A\obj\Debug\net7.0\Project_B.AssemblyInfo.cs
+E:\Робота\ООП\Practise 2\Project-A\Project_A\obj\Debug\net7.0\Project_B.csproj.CoreCompileInputs.cache
+E:\Робота\ООП\Practise 2\Project-A\Project_A\obj\Debug\net7.0\Project_B.dll
+E:\Робота\ООП\Practise 2\Project-A\Project_A\obj\Debug\net7.0\refint\Project_B.dll
+E:\Робота\ООП\Practise 2\Project-A\Project_A\obj\Debug\net7.0\Project_B.pdb
+E:\Робота\ООП\Practise 2\Project-A\Project_A\obj\Debug\net7.0\Project_B.genruntimeconfig.cache
+E:\Робота\ООП\Practise 2\Project-A\Project_A\obj\Debug\net7.0\ref\Project_B.dll

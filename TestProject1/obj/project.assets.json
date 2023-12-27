@@ -2318,11 +2318,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "E:\\Робота\\ООП\\Project_B\\TestProject1\\TestProject1.csproj",
+      "projectUniqueName": "E:\\Робота\\ООП\\Practise 2\\Project-A\\TestProject1\\TestProject1.csproj",
       "projectName": "TestProject1",
-      "projectPath": "E:\\Робота\\ООП\\Project_B\\TestProject1\\TestProject1.csproj",
+      "projectPath": "E:\\Робота\\ООП\\Practise 2\\Project-A\\TestProject1\\TestProject1.csproj",
       "packagesPath": "C:\\Users\\User\\.nuget\\packages\\",
-      "outputPath": "E:\\Робота\\ООП\\Project_B\\TestProject1\\obj\\",
+      "outputPath": "E:\\Робота\\ООП\\Practise 2\\Project-A\\TestProject1\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\User\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -2339,8 +2339,8 @@
         "net7.0": {
           "targetAlias": "net7.0",
           "projectReferences": {
-            "E:\\Робота\\ООП\\Project_B\\Project_A\\Project_B.csproj": {
-              "projectPath": "E:\\Робота\\ООП\\Project_B\\Project_A\\Project_B.csproj"
+            "E:\\Робота\\ООП\\Practise 2\\Project-A\\Project_A\\Project_B.csproj": {
+              "projectPath": "E:\\Робота\\ООП\\Practise 2\\Project-A\\Project_A\\Project_B.csproj"
             }
           }
         }
