@@ -1,5 +1,6 @@
 ﻿using Project_A.Classes;
 using Project_A;
+using Project_B.Classes;
 
 namespace Project
 {
@@ -9,8 +10,8 @@ namespace Project
         {
             Console.OutputEncoding = System.Text.Encoding.UTF8;
             Console.WriteLine("Project (part B)\n");
-            Console.WriteLine("-----Передбачення полiморфiзму-----\nВарiант 1: об’єкти похiдного класу обробляються як об’єкти базового\r\nкласу (в параметрах методiв, в колекцiях та iн.);");
-            
+            Console.WriteLine("-----Передбачення поліморфізму-----\nВаріант 1: об’єкти похідного класу обробляються як об’єкти базового класу (в параметрах методів, в колекціях та ін.);");
+
             List<PersonBase> people = new List<PersonBase>();
 
             Student student = new Student("John Doe", 621, 90, LabCourse.Math);
@@ -42,44 +43,15 @@ namespace Project
             {
                 University university = new University(universityName, foundedYear, CreateMonitor());
                 university.DisplayUniversityInfo();
+                Console.WriteLine("------------------");
 
                 int choice;
                 do
                 {
-                    Console.WriteLine("=== Панель керування університетом ===");
-                    Console.WriteLine("1. Add Student");
-                    Console.WriteLine("2. Add Lab Work");
-                    Console.WriteLine("3. Показати всі лабораторні");
-                    Console.WriteLine("4. Показати всіх студентів");
-                    Console.WriteLine("0. Вихід");
-                    Console.Write("Введіть значення: ");
-
+                    DisplayMenu(); // Виведення оновленого меню
                     if (int.TryParse(Console.ReadLine(), out choice))
                     {
-                        switch (choice)
-                        {
-                            case 1:
-                                Console.Clear();
-                                AddStudent(university);
-                                break;
-                            case 2:
-                                Console.Clear();
-                                AddLabWork(university);
-                                break;
-                            case 3:
-                                Console.Clear();
-                                DisplayAllLabs(university);
-                                break;
-                            case 4:
-                                Console.Clear();
-                                DisplayAllStudents(university);
-                                break;
-                            case 0:
-                                break;
-                            default:
-                                Console.WriteLine("Невірний вибір.");
-                                break;
-                        }
+                        HandleMenuChoice(choice, university);
                     }
                     else
                     {
@@ -92,6 +64,47 @@ namespace Project
             else
             {
                 Console.WriteLine("Невірний тип даних.");
+            }
+        }
+
+        // Оновлене меню
+        static void DisplayMenu()
+        {
+            Console.WriteLine("=== Панель керування університетом ===");
+            Console.WriteLine("1. Додати студента");
+            Console.WriteLine("2. Додати лабораторну роботу");
+            Console.WriteLine("3. Показати всі лабораторні");
+            Console.WriteLine("4. Показати всіх студентів");
+            Console.WriteLine("0. Вихід");
+            Console.Write("Введіть значення: ");
+        }
+
+        // Обробка вибору користувача
+        static void HandleMenuChoice(int choice, University university)
+        {
+            switch (choice)
+            {
+                case 1:
+                    Console.Clear();
+                    AddStudent(university);
+                    break;
+                case 2:
+                    Console.Clear();
+                    AddLabWork(university);
+                    break;
+                case 3:
+                    Console.Clear();
+                    DisplayAllLabs(university);
+                    break;
+                case 4:
+                    Console.Clear();
+                    DisplayAllStudents(university);
+                    break;
+                case 0:
+                    break;
+                default:
+                    Console.WriteLine("Невірний вибір.");
+                    break;
             }
         }
 
@@ -123,9 +136,11 @@ namespace Project
                 return null;
             }
         }
+
+
         static void AddStudent(University university)
         {
-            Console.WriteLine("=== Додати студениа ===");
+            Console.WriteLine("=== Додати студента ===");
             Console.Write("Ім'я студента: ");
             string name = Console.ReadLine();
 
@@ -140,7 +155,6 @@ namespace Project
                     {
                         Student student = new Student(name, group, grade, labCourse);
                         university.AddStudent(student);
-                        Console.WriteLine("Додано!");
                     }
                     else
                     {
@@ -160,7 +174,7 @@ namespace Project
 
         static void AddLabWork(University university)
         {
-            Console.WriteLine("=== Додати лабораторну ===");
+            Console.WriteLine("=== Додати лабораторну роботу ===");
             Console.Write("Ім'я лабораторної роботи: ");
             string labName = Console.ReadLine();
 
@@ -177,7 +191,6 @@ namespace Project
                         Student selectedStudent = university.Students[studentNumber];
                         Works labWork = new Works(selectedStudent, labName, date);
                         university.AddLab(labWork);
-                        Console.WriteLine("Лаба додана!");
                     }
                     else
                     {
@@ -194,6 +207,7 @@ namespace Project
                 Console.WriteLine("Невірний тип даних.");
             }
         }
+
 
         static void DisplayAllLabs(University university)
         {
@@ -221,6 +235,16 @@ namespace Project
                 Console.WriteLine($"Ім'я: {student.NameStudent}, Група: {student.Group}, Grade: {student.Grade}");
                 Console.WriteLine();
             }
+        }
+    
+        private static void HandleStudentAdded(object sender, StudentEventArgs e)
+        {
+            Console.WriteLine($"Студента додано: {e.AddedStudent.NameStudent}, Група: {e.AddedStudent.Group}");
+        }
+
+        private static void HandleLabAdded(object sender, LabEventArgs e)
+        {
+            Console.WriteLine($"Лабораторну додано: {e.AddedLab.LabName}, Дата: {e.AddedLab.Date}");
         }
     }
 }

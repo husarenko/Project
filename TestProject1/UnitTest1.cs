@@ -91,5 +91,39 @@ namespace UniversityClass.Tests
             Assert.AreEqual(1, university.Students.Count);
             Assert.AreEqual(student, university.Students[0]);
         }
+        [TestMethod]
+        public void AddStudentToUniversity_ShouldInvokeStudentAddedDelegate()
+        {
+            University university = new University("Test University", 2023, new Project_A.Classes.Monitor("Test Monitor", 1, 1));
+
+            // Додаємо обробник події для делегата StudentAdded
+            bool studentAddedDelegateInvoked = false;
+            university.StudentAdded += (sender, e) => studentAddedDelegateInvoked = true;
+
+            // Додаємо студента
+            Student student = new Student("Test Student", 1, 90, LabCourse.Math);
+            university.AddStudent(student);
+
+            // Перевіряємо, чи був викликаний делегат
+            Assert.IsTrue(studentAddedDelegateInvoked);
+        }
+
+        [TestMethod]
+        public void AddLabToUniversity_ShouldInvokeLabAddedDelegate()
+        {
+            University university = new University("Test University", 2023, new Project_A.Classes.Monitor("Test Monitor", 1, 1));
+
+            // Додаємо обробник події для делегата LabAdded
+            bool labAddedDelegateInvoked = false;
+            university.LabAdded += (sender, e) => labAddedDelegateInvoked = true;
+
+            // Додаємо лабораторну роботу
+            Student student = new Student("Test Student", 1, 90, LabCourse.Math);
+            Works lab = new Works(student, "Math1", 2023);
+            university.AddLab(lab);
+
+            // Перевіряємо, чи був викликаний делегат
+            Assert.IsTrue(labAddedDelegateInvoked);
+        }
     }
 }

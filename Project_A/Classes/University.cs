@@ -1,4 +1,5 @@
 ﻿using Project_A;
+using Project_B.Classes;
 
 namespace Project_A.Classes
 {
@@ -21,14 +22,14 @@ namespace Project_A.Classes
             Labs = new List<Works>();
         }
 
-        public void AddStudent(Student student)
-        {
-            Students.Add(student);
-        }
-        public void AddLab(Works lab)
-        {
-            Labs.Add(lab);
-        }
+        //public void AddStudent(Student student)
+        //{
+        //    Students.Add(student);
+        //}
+        //public void AddLab(Works lab)
+        //{
+        //    Labs.Add(lab);
+        //}
 
         public void DisplayUniversityInfo()
         {
@@ -57,6 +58,22 @@ namespace Project_A.Classes
                     Console.WriteLine("----");
                 }
             }
+        }
+
+        public event EventHandler<StudentEventArgs> StudentAdded;
+
+        public event EventHandler<LabEventArgs> LabAdded;
+
+        public void AddStudent(Student student)
+        {
+            Students.Add(student);
+            StudentAdded?.Invoke(this, new StudentEventArgs(student));
+        }
+
+        public void AddLab(Works lab)
+        {
+            Labs.Add(lab);
+            LabAdded?.Invoke(this, new LabEventArgs(lab));
         }
     }
 }
